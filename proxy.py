@@ -42,7 +42,7 @@ def atender_cliente(conexaoCliente, enderecoCliente):
     conexaoCliente.close()
 
 def executar_proxy():
-    host = 'localhost'
+    host = '0.0.0.0'
     porta = 5000
     
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as socketProxy:
