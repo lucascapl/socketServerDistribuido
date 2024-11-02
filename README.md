@@ -77,8 +77,7 @@ Ao executar o cliente e inserir a operação `3 + 4`, o fluxo é o seguinte:
 
 - **Timeout no Proxy**: O proxy possui um timeout para conexões com servidores, o que evita bloqueios se um servidor estiver indisponível.
 - **Segurança nas Operações**: A função de cálculo no servidor foi implementada para permitir apenas operações básicas (soma, subtração, multiplicação e divisão), garantindo segurança contra execução de código arbitrário.
-- **Encerramento Limpo**: O proxy e os servidores podem ser interrompidos com `Ctrl+C` para um encerramento seguro.
-
+- 
 ## Licença
 
 Este projeto foi desenvolvido como parte de um trabalho acadêmico para a disciplina de Sistemas Distribuídos na UERJ.
