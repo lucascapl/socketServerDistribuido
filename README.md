@@ -40,7 +40,46 @@ A aplicação é composta por três componentes principais:
    - Escuta na porta de serviço para receber operações matemáticas e processar o cálculo.
    - Exibe o resultado da operação no console para depuração.
 
-## Executando o Projeto
+
+## Executando o Projeto através de scripts
+
+Este projeto pode ser executado manualmente nos terminais, ou você pode usar scripts para facilitar o processo
+
+### 1. Executando com Scripts Automatizados
+
+#### No Windows
+
+1. Use o arquivo `start_all.bat`:
+   - Navegue até o diretório do projeto onde o arquivo `start_all.bat` está localizado.
+   - Dê um duplo clique no arquivo `start_all.bat` ou execute-o a partir do Prompt de Comando:
+     ```bash
+     start_all.bat
+     ```
+   - Isso abrirá automaticamente cinco consoles:
+     - Três para os `servidorCalc`, cada um rodando em portas diferentes.
+     - Um para o `proxy`.
+     - Um para o `cliente`.
+
+#### No Linux
+
+1. Use o arquivo `start_all.sh`:
+   - Abra um terminal e navegue até o diretório do projeto.
+   - Torne o arquivo executável, se ainda não estiver:
+     ```bash
+     chmod +x start_all.sh
+     ```
+   - Execute o script com o comando:
+     ```bash
+     ./start_all.sh
+     ```
+   - Esse comando abrirá automaticamente cinco terminais:
+     - Três para os `servidorCalc`, cada um rodando em portas diferentes.
+     - Um para o `proxy`.
+     - Um para o `cliente`.
+
+## Executando o Projeto manualmente
+
+Caso prefira iniciar cada componente manualmente:
 
 1. Inicie os servidores:
    - Em 3 terminais diferentes, execute `servidorCalculo.py` especificando as portas de status e serviço. Exemplo:
@@ -77,7 +116,6 @@ Ao executar o cliente e inserir a operação `3 + 4`, o fluxo é o seguinte:
 
 - **Timeout no Proxy**: O proxy possui um timeout para conexões com servidores, o que evita bloqueios se um servidor estiver indisponível.
 - **Segurança nas Operações**: A função de cálculo no servidor foi implementada para permitir apenas operações básicas (soma, subtração, multiplicação e divisão), garantindo segurança contra execução de código arbitrário.
-- 
 ## Licença
 
 Este projeto foi desenvolvido como parte de um trabalho acadêmico para a disciplina de Sistemas Distribuídos na UERJ.
